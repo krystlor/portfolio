@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Mniszek</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+  <style>
+   #flowers-absolute { display:none;}
+   #flowers-absolute { background:url(mniszek-absolute1.png) top center no-repeat; width:123px; height:121px; position:absolute; right:-65px; top:360px; display:block; z-index:1000;}
+  .nivo-controlNav {position:absolute;left:35px;top:420px;z-index:1000;}
+  .nivo-controlNav a {width:18px;height:18px; display:inline-block;padding:0 0 0 0; margin-right:10px;overflow:hidden;float:left;background:url(css/slider_item.png) right top no-repeat;cursor:pointer; text-indent:-9999px;}
+  .nivo-controlNav a.active { background-position:left top;}
+
+  </style>
+</head>
+<body style="margin:0px; padding:0px; text-align:center">
+	<div style="background:url('bg.jpg') top center no-repeat; background-attachment:fixed; ">
+		<div style="margin:auto; width:1064px; position:relative;">
+      		<div id="flowers-absolute"></div>
+      		<div class="nivo-controlNav" style=""></div>
+      		<img src="images/01-top.png" alt="Wczytywanie..." style="padding-top:30px" />
+      		<div id="slider">
+      			<img src="images/02-baner1.png" alt="" style="" />
+      			<img src="images/02-baner2.png" alt="" style="display:none" />
+      			<img src="images/02-baner3.png" alt="" style="display:none" />
+      		</div>
+      		<img src="images/03-bottom.png" alt="Wczytywanie..." style="padding-bottom:30px" />
+    </div>
+	</div>	
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+	$('#slider').nivoSlider({
+		effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
+		slices:10,
+		animSpeed:500, //Slide transition speed
+		pauseTime:5000,
+		startSlide:0, //Set starting Slide (0 index)
+		directionNav:false, //Next & Prev
+		directionNavHide:false, //Only show on hover
+		controlNav:true, //1,2,3...
+		controlNavThumbs:false, //Use thumbnails for Control Nav
+      	controlNavThumbsFromRel:false, //Use image rel for thumbs
+		controlNavThumbsSearch: '.jpg', //Replace this with...
+		controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+		keyboardNav:true, //Use left & right arrows
+		pauseOnHover:true, //Stop animation while hovering
+		manualAdvance:false, //Force manual transitions
+		captionOpacity:1.0, //Universal caption opacity
+		beforeChange: function(){},
+		afterChange: function(){},
+		slideshowEnd: function(){} //Triggers after all slides have been shown
+		});
+	});
+    </script>
+</body>
+</html>

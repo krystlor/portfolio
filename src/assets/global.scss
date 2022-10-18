@@ -1,0 +1,114 @@
+$link-color: #25699d;
+
+html {
+  font: normal 14px Arial;
+  display: flex;
+  justify-content: center;
+}
+body {
+  max-width: 1300px;
+}
+h1 {
+  font-size: 2.1rem;
+  font-weight: normal;
+  margin: 1rem;
+}
+h2 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin: 1rem;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+p.title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+a {
+  &:link,
+  &:visited,
+  &:hover {
+    color: $link-color;
+  }
+
+  &.blank {
+    padding-left: 1rem;
+    background: url("../assets/new_tab.gif") no-repeat left;
+  }
+}
+.container {
+  padding: 0;
+}
+.row {
+  --bs-gutter-x: 0;
+}
+#gatsby-focus-wrapper > div:first-child,
+.col-xl-6 > div > div {
+  margin-inline: 1rem;
+}
+.topFrame {
+  margin-block: 1rem;
+  padding: 0 1rem;
+}
+.topFrame > div,
+.projectImgFrame > div {
+  border-radius: 0.5rem;
+  border: 1px solid #c2c2c2;
+  padding: 2rem;
+  margin-bottom: 10px;
+}
+.projectImgFrame > div {
+  padding: 0;
+  margin-inline: 1px;
+}
+.project {
+  margin-block: 2rem;
+  visibility: hidden;
+}
+.projectImgFrame {
+  overflow: hidden;
+  > div {
+    overflow: hidden;
+  }
+}
+.projectImgFrame {
+  img,
+  span {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+#gatsby-focus-wrapper > div:first-child,
+.col-3 {
+  text-align: right;
+}
+@media (min-width: 544px) {
+  .topFrame,
+  .projectImgFrame {
+    background: url("../assets/frame_shadow_461.png") no-repeat bottom center;
+  }
+}
+@media (min-width: 768px) {
+  .topFrame,
+  .projectImgFrame {
+    background-image: url("../assets/frame_shadow_544.png");
+  }
+}
+@media (min-width: 992px) {
+  .topFrame {
+    background-image: url("../assets/frame_shadow_461.png");
+  }
+}
+@media (min-width: 1200px) {
+  .topFrame {
+    background-image: url("../assets/frame_shadow_544.png");
+  }
+}

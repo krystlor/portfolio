@@ -1,0 +1,246 @@
+﻿{
+  "projectLinkName": "fullsize snapshot",
+  "projectsImgFolderPath": "./projects",
+  "projectsArray": [
+    {
+      "projectName": "Choren - ship design office (in progress)",
+      "projectImgFilename": "choren_new",
+      "projectURL": "http://choren.com.pl/projekt/"
+    },
+    {
+      "projectName": "Janosik - holiday house",
+      "projectImgFilename": "dwjanosik",
+      "projectURL": "http://dwjanosik.pl"
+    },
+    {
+      "projectName": "Fargo Logistics - shipping company",
+      "projectImgFilename": "fargologistics",
+      "projectURL": "https://fargologistics.pl"
+    },
+    {
+      "projectName": "Supmar - ship supplier",
+      "projectImgFilename": "supmar"
+    },
+    {
+      "projectName": "Main Office of Geodesy and Cartography",
+      "projectImgFilename": "gugik1x"
+    },
+    {
+      "projectName": "Netland - IT company",
+      "projectImgFilename": "netland_new"
+    },
+    {
+      "projectName": "ARRSA - regional development agency",
+      "projectImgFilename": "arrsa"
+    },
+    {
+      "projectName": "Akleo - interactive agency",
+      "projectImgFilename": "akleo"
+    },
+    {
+      "projectName": "Main Office of Geodesy and Cartography",
+      "projectImgFilename": "gugik2x"
+    },
+    {
+      "projectName": "MES - boat engines' shop",
+      "projectImgFilename": "mes"
+    },
+    {
+      "projectName": "Mniszek - herbal store",
+      "projectImgFilename": "mniszek"
+    },
+    {
+      "projectName": "Voivodship Office in Olsztyn",
+      "projectImgFilename": "uw_new"
+    },
+    {
+      "projectName": "Studio FM - printing shop",
+      "projectImgFilename": "studio_fm"
+    },
+    {
+      "projectName": "EGOSA - catalog of offers",
+      "projectImgFilename": "egosa"
+    },
+    {
+      "projectName": "SMD - electronic manufacture company",
+      "projectImgFilename": "smdmontaz"
+    },
+    {
+      "projectName": "Cityoffice - architectural studio",
+      "projectImgFilename": "cityoffice0_2x"
+    },
+    {
+      "projectName": "Telmor - electronic manufacture company",
+      "projectImgFilename": "telmorsmd"
+    },
+    {
+      "projectName": "Architekto - architectural studio",
+      "projectImgFilename": "architekto"
+    },
+    {
+      "projectName": "OITBD - IT center of the voivodeship office",
+      "projectImgFilename": "oitbd"
+    },
+    {
+      "projectName": "Cityoffice - architectural studio",
+      "projectImgFilename": "cityoffice0_1x"
+    },
+    {
+      "projectName": "Flis - architectural studio",
+      "projectImgFilename": "flis"
+    },
+    {
+      "projectName": "Arcus - architectural studio",
+      "projectImgFilename": "arcus"
+    },
+    {
+      "projectName": "Leonardo - architectural studio",
+      "projectImgFilename": "leonardo"
+    },
+    {
+      "projectName": "Atrium - office building",
+      "projectImgFilename": "atrium"
+    },
+    {
+      "projectName": "Vigo - tattoo shop",
+      "projectImgFilename": "vigo"
+    },
+    {
+      "projectName": "Naszepiece - heating stove shop",
+      "projectImgFilename": "naszepiece"
+    },
+    {
+      "projectName": "Hermanbud - renovation company",
+      "projectImgFilename": "hermanbud_de"
+    },
+    {
+      "projectName": "Hermanbud - renovation company",
+      "projectImgFilename": "hermanbud_pl"
+    },
+    {
+      "projectName": "UJK - university research project",
+      "projectImgFilename": "ujk"
+    },
+    {
+      "projectName": "Kreator - creator of wedding invitations",
+      "projectImgFilename": "kreator"
+    },
+    {
+      "projectName": "Future - football management agency",
+      "projectImgFilename": "futurefootball"
+    },
+    {
+      "projectName": "JSB - advocate office",
+      "projectImgFilename": "szmyt1x"
+    },
+    {
+      "projectName": "JSB - advocate office",
+      "projectImgFilename": "szmyt3x"
+    },
+    {
+      "projectName": "OIRP - law society of legal advisers",
+      "projectImgFilename": "oirp1x"
+    },
+    {
+      "projectName": "Choren Design & Consulting - ship design office",
+      "projectImgFilename": "choren"
+    },
+    {
+      "projectName": "JSB - advocate office",
+      "projectImgFilename": "szmyt2x"
+    },
+    {
+      "projectName": "Jota - architectural studio",
+      "projectImgFilename": "jota"
+    },
+    {
+      "projectName": "Armi - architectural studio",
+      "projectImgFilename": "armi1x"
+    },
+    {
+      "projectName": "OIRP - law society of legal advisers",
+      "projectImgFilename": "oirp2x"
+    },
+    {
+      "projectName": "Voivodship Office in Olsztyn",
+      "projectImgFilename": "uw_old"
+    },
+    {
+      "projectName": "Armi - architectural studio",
+      "projectImgFilename": "armi2x"
+    },
+    {
+      "projectName": "BRR - regional development office",
+      "projectImgFilename": "brr"
+    },
+    {
+      "projectName": "Jan Lorych - insurance agent",
+      "projectImgFilename": "janlorych"
+    },
+    {
+      "projectName": "OIRP - law society of legal advisers",
+      "projectImgFilename": "oirp"
+    },
+    {
+      "projectName": "ZGOK - department of waste management",
+      "projectImgFilename": "zgok"
+    },
+    {
+      "projectName": "Wrota - regional information portal",
+      "projectImgFilename": "wrota"
+    },
+    {
+      "projectName": "BJT - boat construction office",
+      "projectImgFilename": "bjt"
+    },
+    {
+      "projectName": "PBF - pomeranian finance office",
+      "projectImgFilename": "pbf"
+    },
+    {
+      "projectName": "Apartment in Gdansk",
+      "projectImgFilename": "apartamentgdansk"
+    },
+    {
+      "projectName": "Cityoffice - architectural studio",
+      "projectImgFilename": "cityoffice1x"
+    },
+    {
+      "projectName": "Piotr Różański - candidate for the mayor",
+      "projectImgFilename": "piotr_rozanski"
+    },
+    {
+      "projectName": "Cityoffice TV - led banner advertising",
+      "projectImgFilename": "cityofficetv"
+    },
+    {
+      "projectName": "Netland - IT company",
+      "projectImgFilename": "netland_old"
+    },
+    {
+      "projectName": "Termika - heating, fans, heat pumps",
+      "projectImgFilename": "termika"
+    },
+    {
+      "projectName": "ComputerFix - IT company",
+      "projectImgFilename": "computerfix"
+    },
+    {
+      "projectName": "ZGOK - department of waste management",
+      "projectImgFilename": "zgok_old"
+    },
+    {
+      "projectName": "Zoo Karina - pet markets",
+      "projectImgFilename": "zookarina"
+    },
+    {
+      "projectName": "Elimo - exclusive limousine",
+      "projectImgFilename": "elimo"
+    },
+    {
+      "projectName": "Mar2HR - the Garmin watchface application for runners (Monkey C language)",
+      "projectImgFilename": "garmin",
+      "projectURL": "https://apps.garmin.com/pl-PL/apps/827b1e05-9b4f-4ff6-96e2-e7ea2fc508e1"
+    }
+  ]
+}

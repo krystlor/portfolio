@@ -1,0 +1,34 @@
+[
+  {
+    "title": "About me:",
+    "content": [
+      "living: Gdansk/Poland",
+      "email: krystian@lorych.com",
+      "more info: resume-lorych.pdf"
+    ]
+  },
+  {
+    "title": "Expertise:",
+    "content": [
+      "- development of complete web solutions",
+      "- cross-browser, responsive websites",
+      "- visual design skills"
+    ]
+  },
+  {
+    "title": "Skills:",
+    "content": [
+      "- problem solving",
+      "- ability to quick learn",
+      "- critical thinker"
+    ]
+  },
+  {
+    "title": "Job expectations:",
+    "content": [
+      "- skills development possibility",
+      "- good working atmosphere",
+      "- meeting personal ambitions"
+    ]
+  }
+]
