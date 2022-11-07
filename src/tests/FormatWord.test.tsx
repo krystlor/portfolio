@@ -10,6 +10,7 @@ describe("Should format email as a proper HTML email component", () => {
     );
   });
 });
+
 describe("Should format PDF file as a proper HTML link code", () => {
   let word = "example.pdf";
   test("example.pdf is formatted correctly", () => {
@@ -18,6 +19,7 @@ describe("Should format PDF file as a proper HTML link code", () => {
     );
   });
 });
+
 describe("Should return any other word (except for an email or a pdf file) as it is", () => {
   let word = "example";
   test("other words (except for an email or a pdf file) are formatted correctly", () => {
