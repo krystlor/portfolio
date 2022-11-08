@@ -1,19 +1,30 @@
 import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { projectInterface } from "./projectInterface";
 import Project from "./Project";
+import PropTypes, { InferProps } from "prop-types";
 
-const projects = require("../data/projects.json") as {
-  projectLinkName: string;
-  projectsImgFolderPath: string;
-  projectsArray: projectInterface[];
+interface projectInterface extends Array<any> {
+  projectName?: string;
+  projectImgFilename?: string;
+  projectURL?: string;
+}
+
+const projectListPropTypes = {
+  projectListFile: PropTypes.string.isRequired,
 };
 
-const ProjectsList = () => {
+type projectListTypes = InferProps<typeof projectListPropTypes>;
+
+const ProjectsList = ({ projectListFile }: projectListTypes) => {
+  const projects = require("../" + projectListFile) as {
+    projectLinkName: string;
+    projectsImgFolderPath: string;
+    projectsArray: projectInterface[];
+  };
   const projectsTotal = projects.projectsArray.length;
   const chunkSize = 2;
 
-  let reducedArray = projects.projectsArray.reduce<projectInterface[]>(
+  let chunkedArray = projects.projectsArray.reduce<projectInterface[]>(
     (acc, item) => {
       let group = acc.pop() as projectInterface;
       if (group.length === chunkSize) {
@@ -30,7 +41,7 @@ const ProjectsList = () => {
   let projectActualNumber = 0;
   return (
     <>
-      {reducedArray.map((doubleItem, key) => {
+      {chunkedArray.map((doubleItem, key) => {
         return (
           <Container key={key}>
             <Row>

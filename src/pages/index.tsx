@@ -21,10 +21,10 @@ const IndexPage = () => (
       {config.githubLinkName}
     </ExternalLink>
     <h1>{config.pageTitle}</h1>
-    <TopFrames />
+    <TopFrames topFramesContentFile={"data/topFrames.json"} />
     <h2>{config.subsectionTitle}</h2>
     <h3>{config.subsectionSubtitle}</h3>
-    <ProjectsList />
+    <ProjectsList projectListFile={"data/projects.json"} />
   </>
 );
 
