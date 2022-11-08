@@ -25,7 +25,7 @@ const Column = ({ title, content }: ListTypes) => (
         <li
           key={line}
           dangerouslySetInnerHTML={{
-            __html: formatLine(line as string),
+            __html: formatLine(line!),
           }}
         />
       ))}
