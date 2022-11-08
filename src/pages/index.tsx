@@ -22,8 +22,8 @@ const IndexPage = () => (
     </ExternalLink>
     <h1>{config.pageTitle}</h1>
     <TopFrames />
-    <h1>{config.subsectionTitle}</h1>
-    <h2>{config.subsectionSubtitle}</h2>
+    <h2>{config.subsectionTitle}</h2>
+    <h3>{config.subsectionSubtitle}</h3>
     <ProjectsList />
   </>
 );

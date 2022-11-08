@@ -30,9 +30,9 @@ const Project = ({
       <Container>
         <Row>
           <Col xs="9">
-            <h3>
+            <h4>
               {projectName} ({projectsTotal - projectActualNumber})
-            </h3>
+            </h4>
           </Col>
           <Col xs="3">
             <ExternalLink

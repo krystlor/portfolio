@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes, { InferProps } from "prop-types";
 import { Container, Row, Col } from "react-bootstrap";
-import List from "./List";
+import Column from "./Column";
 
 const TopFramePropTypes = {
   column1: PropTypes.shape({
@@ -21,10 +21,10 @@ const TopFrame = ({ column1, column2 }: TopFrameTypes) => (
     <Container>
       <Row>
         <Col sm={6}>
-          <List title={column1.title} content={column1.content} />
+          <Column title={column1.title} content={column1.content} />
         </Col>
         <Col sm={6}>
-          <List title={column2.title} content={column2.content} />
+          <Column title={column2.title} content={column2.content} />
         </Col>
       </Row>
     </Container>
