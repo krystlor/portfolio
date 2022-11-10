@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes, { InferProps } from "prop-types";
 import { Container, Row, Col } from "react-bootstrap";
-import Column from "./Column";
+import { Column } from "./Column";
 
 const TopFramePropTypes = {
   column1: PropTypes.shape({
@@ -13,10 +13,9 @@ const TopFramePropTypes = {
     content: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
-
 type TopFrameTypes = InferProps<typeof TopFramePropTypes>;
 
-const TopFrame = ({ column1, column2 }: TopFrameTypes) => (
+export const TopFrame = ({ column1, column2 }: TopFrameTypes) => (
   <div>
     <Container>
       <Row>
@@ -30,7 +29,4 @@ const TopFrame = ({ column1, column2 }: TopFrameTypes) => (
     </Container>
   </div>
 );
-
 TopFrame.propTypes = TopFramePropTypes;
-
-export default TopFrame;

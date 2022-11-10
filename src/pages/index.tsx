@@ -1,10 +1,10 @@
 import * as React from "react";
 import "../assets/bootstrap.min.css";
 import "../assets/global.scss";
-import ExternalLink from "../components/ExternalLink";
-import TopFrames from "../components/TopFrames";
-import ProjectsList from "../components/ProjectsList";
-import HelmetSection from "../components/HelmetSection";
+import { ExternalLink } from "../components/ExternalLink";
+import { ProjectsList } from "../components/ProjectsList";
+import { HelmetSection } from "../components/HelmetSection";
+import { TopFrames } from "../components/TopFrames";
 
 const config = require("../data/config.json") as {
   pageTitle: string;
@@ -24,8 +24,7 @@ const IndexPage = () => (
     <TopFrames topFramesContentFile={"data/topFrames.json"} />
     <h2>{config.subsectionTitle}</h2>
     <h3>{config.subsectionSubtitle}</h3>
-    <ProjectsList projectListFile={"data/projects.json"} />
+    <ProjectsList projectsListFile={"data/projects.json"} />
   </>
 );
-
 export default IndexPage;

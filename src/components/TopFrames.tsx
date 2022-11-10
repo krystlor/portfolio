@@ -1,15 +1,14 @@
 import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import TopFrame from "../components/TopFrame";
+import { TopFrame } from "../components/TopFrame";
 import PropTypes, { InferProps } from "prop-types";
 
-const topFramePropTypes = {
+const TopFramesPropTypes = {
   topFramesContentFile: PropTypes.string.isRequired,
 };
+type TopFrameTypes = InferProps<typeof TopFramesPropTypes>;
 
-type topFrameTypes = InferProps<typeof topFramePropTypes>;
-
-const TopFrames = ({ topFramesContentFile }: topFrameTypes) => {
+export const TopFrames = ({ topFramesContentFile }: TopFrameTypes) => {
   const topFrames = require("../" + topFramesContentFile) as {
     title: string;
     content: string[];
@@ -27,5 +26,4 @@ const TopFrames = ({ topFramesContentFile }: topFrameTypes) => {
     </Container>
   );
 };
-
-export default TopFrames;
+TopFrames.propTypes = TopFramesPropTypes;

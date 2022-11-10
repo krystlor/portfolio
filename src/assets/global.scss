@@ -1,5 +1,3 @@
-$link-color: #25699d;
-
 html {
   font: normal 14px Arial;
   display: flex;
@@ -37,7 +35,7 @@ a {
   &:link,
   &:visited,
   &:hover {
-    color: $link-color;
+    color: #25699d;
   }
 
   &.blank {

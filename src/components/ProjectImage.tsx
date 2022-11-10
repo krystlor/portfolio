@@ -7,10 +7,9 @@ const ProjectImagePropTypes = {
   projectImgFilename: PropTypes.string.isRequired,
   projectActualNumber: PropTypes.number.isRequired,
 };
-
 type ProjectImageTypes = InferProps<typeof ProjectImagePropTypes>;
 
-const ProjectImage = ({
+export const ProjectImage = ({
   projectImgFilename,
   projectActualNumber,
 }: ProjectImageTypes) => {
@@ -39,7 +38,4 @@ const ProjectImage = ({
     />
   );
 };
-
 ProjectImage.propTypes = ProjectImagePropTypes;
-
-export default ProjectImage;

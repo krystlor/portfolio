@@ -5,10 +5,13 @@ const ExternalLinkPropTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
 };
-
 type ExternalLinkTypes = InferProps<typeof ExternalLinkPropTypes>;
 
-const ExternalLink = ({ href, children, ...other }: ExternalLinkTypes) => (
+export const ExternalLink = ({
+  href,
+  children,
+  ...other
+}: ExternalLinkTypes) => (
   <div>
     <a
       className={"blank"}
@@ -21,7 +24,4 @@ const ExternalLink = ({ href, children, ...other }: ExternalLinkTypes) => (
     </a>
   </div>
 );
-
 ExternalLink.propTypes = ExternalLinkPropTypes;
-
-export default ExternalLink;

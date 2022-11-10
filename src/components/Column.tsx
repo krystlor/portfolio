@@ -1,23 +1,21 @@
 import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 
-const ListPropTypes = {
+const ColumnPropTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
-
-type ListTypes = InferProps<typeof ListPropTypes>;
+type ColumnTypes = InferProps<typeof ColumnPropTypes>;
 
 const formatLine = (line: string) => {
   const isPDFFile = /([^ ]+\.pdf)/;
   const isEmailAddress = /([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)/;
-
   return line
     .replace(isPDFFile, "<a href='/files/$1'>$1</a>")
     .replace(isEmailAddress, '<a href="mailto:$1">$1</a>');
 };
 
-const Column = ({ title, content }: ListTypes) => (
+export const Column = ({ title, content }: ColumnTypes) => (
   <>
     <p className="title">{title}</p>
     <ul>
@@ -32,7 +30,4 @@ const Column = ({ title, content }: ListTypes) => (
     </ul>
   </>
 );
-
-Column.propTypes = ListPropTypes;
-
-export default Column;
+Column.propTypes = ColumnPropTypes;

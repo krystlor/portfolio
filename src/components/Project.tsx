@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 import { Container, Row, Col } from "react-bootstrap";
-import ExternalLink from "./ExternalLink";
-import ProjectImage from "./ProjectImage";
+import { ExternalLink } from "./ExternalLink";
+import { ProjectImage } from "./ProjectImage";
 
 const ProjectPropTypes = {
   singleItem: PropTypes.shape({
@@ -15,10 +15,9 @@ const ProjectPropTypes = {
   projectLinkName: PropTypes.string.isRequired,
   projectsImgFolderPath: PropTypes.string.isRequired,
 };
-
 type ProjectTypes = InferProps<typeof ProjectPropTypes>;
 
-const Project = ({
+export const Project = ({
   singleItem: { projectName, projectImgFilename, projectURL },
   projectActualNumber,
   projectsTotal,
@@ -58,7 +57,4 @@ const Project = ({
     </div>
   </div>
 );
-
 Project.propTypes = ProjectPropTypes;
-
-export default Project;

@@ -1,32 +1,30 @@
 import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Project from "./Project";
+import { Project } from "./Project";
 import PropTypes, { InferProps } from "prop-types";
 
-interface projectInterface extends Array<any> {
+interface ProjectInterface extends Array<any> {
   projectName?: string;
   projectImgFilename?: string;
   projectURL?: string;
 }
-
-const projectListPropTypes = {
-  projectListFile: PropTypes.string.isRequired,
+const ProjectsListPropTypes = {
+  projectsListFile: PropTypes.string.isRequired,
 };
+type ProjectsListTypes = InferProps<typeof ProjectsListPropTypes>;
 
-type projectListTypes = InferProps<typeof projectListPropTypes>;
-
-const ProjectsList = ({ projectListFile }: projectListTypes) => {
-  const projects = require("../" + projectListFile) as {
+export const ProjectsList = ({ projectsListFile }: ProjectsListTypes) => {
+  const projects = require("../" + projectsListFile) as {
     projectLinkName: string;
     projectsImgFolderPath: string;
-    projectsArray: projectInterface[];
+    projectsArray: ProjectInterface[];
   };
   const projectsTotal = projects.projectsArray.length;
   const chunkSize = 2;
 
-  let chunkedArray = projects.projectsArray.reduce<projectInterface[]>(
+  let chunkedArray = projects.projectsArray.reduce<ProjectInterface[]>(
     (acc, item) => {
-      let group = acc.pop() as projectInterface;
+      let group = acc.pop() as ProjectInterface;
       if (group.length === chunkSize) {
         acc.push(group);
         group = [];
@@ -72,5 +70,4 @@ const ProjectsList = ({ projectListFile }: projectListTypes) => {
     </>
   );
 };
-
-export default ProjectsList;
+ProjectsList.propTypes = ProjectsListPropTypes;

@@ -8,10 +8,9 @@ const HelmetSectionPropTypes = {
   charset: PropTypes.string,
   robots: PropTypes.string,
 };
-
 type HelmetSectionTypes = InferProps<typeof HelmetSectionPropTypes>;
 
-const HelmetSection = ({
+export const HelmetSection = ({
   title,
   lang,
   charset,
@@ -31,7 +30,4 @@ HelmetSection.defaultProps = {
   charset: "utf-8",
   robots: "noindex,nofollow",
 };
-
 HelmetSection.propTypes = HelmetSectionPropTypes;
-
-export default HelmetSection;
