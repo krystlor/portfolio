@@ -4,27 +4,22 @@ import "../assets/global.scss";
 import { ExternalLink } from "../components/ExternalLink";
 import { ProjectsList } from "../components/ProjectsList";
 import { HelmetSection } from "../components/HelmetSection";
-import { TopFrames } from "../components/TopFrames";
+import { BasicInfos } from "../components/BasicInfos";
 
-const config = require("../data/config.json") as {
-  pageTitle: string;
-  subsectionTitle: string;
-  subsectionSubtitle: string;
-  githubLinkName: string;
-  githubHref: string;
+const IndexPage = () => {
+  console.log(process.env.PAGE_TITLE);
+  return (
+    <>
+      <HelmetSection title={process.env.PAGE_TITLE} />
+      <ExternalLink href={process.env.GITHUB_HREF as string}>
+        {process.env.GITHUB_LINKNAME as string}
+      </ExternalLink>
+      <h1>{process.env.PAGE_TITLE}</h1>
+      <BasicInfos />
+      <h2>{process.env.SECTION_TITLE}</h2>
+      <h3>{process.env.SECTION_SUBTITLE}</h3>
+      <ProjectsList />
+    </>
+  );
 };
-
-const IndexPage = () => (
-  <>
-    <HelmetSection title={config.pageTitle} />
-    <ExternalLink href={config.githubHref}>
-      {config.githubLinkName}
-    </ExternalLink>
-    <h1>{config.pageTitle}</h1>
-    <TopFrames topFramesContentFile={"data/topFrames.json"} />
-    <h2>{config.subsectionTitle}</h2>
-    <h3>{config.subsectionSubtitle}</h3>
-    <ProjectsList projectsListFile={"data/projects.json"} />
-  </>
-);
 export default IndexPage;

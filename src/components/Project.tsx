@@ -15,7 +15,6 @@ const ProjectPropTypes = {
   projectLinkName: PropTypes.string.isRequired,
   projectsImgFolderPath: PropTypes.string.isRequired,
 };
-type ProjectTypes = InferProps<typeof ProjectPropTypes>;
 
 export const Project = ({
   singleItem: { projectName, projectImgFilename, projectURL },
@@ -23,7 +22,7 @@ export const Project = ({
   projectsTotal,
   projectLinkName,
   projectsImgFolderPath,
-}: ProjectTypes) => (
+}: InferProps<typeof ProjectPropTypes>) => (
   <div data-visible={`project_${projectActualNumber}`} className={"project"}>
     <div>
       <Container>

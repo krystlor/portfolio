@@ -4,7 +4,7 @@ html {
   justify-content: center;
 }
 body {
-  max-width: 1300px;
+  width: 100%;
 }
 h1,
 h2 {
@@ -53,11 +53,11 @@ a {
 .col-xl-6 > div > div {
   margin-inline: 1rem;
 }
-.topFrame {
+.top-frame {
   margin-block: 1rem;
   padding: 0 1rem;
 }
-.topFrame > div,
+.top-frame > div,
 .projectImgFrame > div {
   border-radius: 0.5rem;
   border: 1px solid #c2c2c2;
@@ -89,25 +89,42 @@ a {
 .col-3 {
   text-align: right;
 }
-@media (min-width: 544px) {
-  .topFrame,
+@media only screen and (min-width: 544px) {
+  body {
+    max-width: 540px;
+  }
+  .top-frame,
   .projectImgFrame {
     background: url("../assets/frame_shadow_461.png") no-repeat bottom center;
   }
 }
-@media (min-width: 768px) {
-  .topFrame,
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 720px;
+  }
+  .top-frame,
   .projectImgFrame {
     background-image: url("../assets/frame_shadow_544.png");
   }
 }
-@media (min-width: 992px) {
-  .topFrame {
+@media only screen and (min-width: 992px) {
+  body {
+    max-width: 960px;
+  }
+  .top-frame {
     background-image: url("../assets/frame_shadow_461.png");
   }
 }
-@media (min-width: 1200px) {
-  .topFrame {
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1140px;
+  }
+  .top-frame {
     background-image: url("../assets/frame_shadow_544.png");
+  }
+}
+@media only screen and (min-width: 1400px) {
+  body {
+    max-width: 1300px;
   }
 }

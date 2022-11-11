@@ -8,21 +8,16 @@ interface ProjectInterface extends Array<any> {
   projectImgFilename?: string;
   projectURL?: string;
 }
-const ProjectsListPropTypes = {
-  projectsListFile: PropTypes.string.isRequired,
+type yyy = {
+  projectLinkName: string;
+  projectsImgFolderPath: string;
+  projectsArray: ProjectInterface[];
 };
-type ProjectsListTypes = InferProps<typeof ProjectsListPropTypes>;
 
-export const ProjectsList = ({ projectsListFile }: ProjectsListTypes) => {
-  const projects = require("../" + projectsListFile) as {
-    projectLinkName: string;
-    projectsImgFolderPath: string;
-    projectsArray: ProjectInterface[];
-  };
-  const projectsTotal = projects.projectsArray.length;
+const xxx = (projects: yyy) => {
   const chunkSize = 2;
 
-  let chunkedArray = projects.projectsArray.reduce<ProjectInterface[]>(
+  return projects.projectsArray.reduce<ProjectInterface[]>(
     (acc, item) => {
       let group = acc.pop() as ProjectInterface;
       if (group.length === chunkSize) {
@@ -35,6 +30,11 @@ export const ProjectsList = ({ projectsListFile }: ProjectsListTypes) => {
     },
     [[]]
   );
+};
+
+export const ProjectsList = () => {
+  const projects = require(process.env.PROJECTS_LIST_FILEPATH as string) as yyy;
+  const chunkedArray = xxx(projects);
 
   let projectActualNumber = 0;
   return (
@@ -56,7 +56,7 @@ export const ProjectsList = ({ projectsListFile }: ProjectsListTypes) => {
                     <Project
                       singleItem={singleItem}
                       projectActualNumber={projectActualNumber++}
-                      projectsTotal={projectsTotal}
+                      projectsTotal={projects.projectsArray.length}
                       projectLinkName={projects.projectLinkName}
                       projectsImgFolderPath={projects.projectsImgFolderPath}
                     />
@@ -70,4 +70,3 @@ export const ProjectsList = ({ projectsListFile }: ProjectsListTypes) => {
     </>
   );
 };
-ProjectsList.propTypes = ProjectsListPropTypes;

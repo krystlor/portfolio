@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 
-const ColumnPropTypes = {
+const BasicInfoColumnPropTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
-type ColumnTypes = InferProps<typeof ColumnPropTypes>;
 
 const formatLine = (line: string) => {
   const isPDFFile = /([^ ]+\.pdf)/;
@@ -15,7 +14,10 @@ const formatLine = (line: string) => {
     .replace(isEmailAddress, '<a href="mailto:$1">$1</a>');
 };
 
-export const Column = ({ title, content }: ColumnTypes) => (
+export const BasicInfoColumn = ({
+  title,
+  content,
+}: InferProps<typeof BasicInfoColumnPropTypes>) => (
   <>
     <p className="title">{title}</p>
     <ul>
@@ -30,4 +32,4 @@ export const Column = ({ title, content }: ColumnTypes) => (
     </ul>
   </>
 );
-Column.propTypes = ColumnPropTypes;
+BasicInfoColumn.propTypes = BasicInfoColumnPropTypes;

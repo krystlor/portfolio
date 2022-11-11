@@ -8,14 +8,13 @@ const HelmetSectionPropTypes = {
   charset: PropTypes.string,
   robots: PropTypes.string,
 };
-type HelmetSectionTypes = InferProps<typeof HelmetSectionPropTypes>;
 
 export const HelmetSection = ({
   title,
   lang,
   charset,
   robots,
-}: HelmetSectionTypes) => (
+}: InferProps<typeof HelmetSectionPropTypes>) => (
   <Helmet>
     <meta name="robots" content={robots!} />
     <meta charSet={charset!} />

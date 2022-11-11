@@ -7,12 +7,11 @@ const ProjectImagePropTypes = {
   projectImgFilename: PropTypes.string.isRequired,
   projectActualNumber: PropTypes.number.isRequired,
 };
-type ProjectImageTypes = InferProps<typeof ProjectImagePropTypes>;
 
 export const ProjectImage = ({
   projectImgFilename,
   projectActualNumber,
-}: ProjectImageTypes) => {
+}: InferProps<typeof ProjectImagePropTypes>) => {
   return (
     <LazyLoadImage
       src={`portfolio/${projectImgFilename}.webp`}
@@ -20,7 +19,7 @@ export const ProjectImage = ({
         const loadedProject = document.querySelector(
           `[data-visible=project_${projectActualNumber}]`
         ) as HTMLCanvasElement;
-        loadedProject.style.visibility = "visible";
+        loadedProject ? (loadedProject.style.visibility = "visible") : null;
       }}
       effect="blur"
       alt={projectImgFilename}

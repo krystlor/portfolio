@@ -1,9 +1,9 @@
 import * as React from "react";
 import PropTypes, { InferProps } from "prop-types";
 import { Container, Row, Col } from "react-bootstrap";
-import { Column } from "./Column";
+import { BasicInfoColumn } from "./BasicInfoColumn";
 
-const TopFramePropTypes = {
+const BasicInfoPropTypes = {
   column1: PropTypes.shape({
     title: PropTypes.string.isRequired,
     content: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -13,20 +13,22 @@ const TopFramePropTypes = {
     content: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
-type TopFrameTypes = InferProps<typeof TopFramePropTypes>;
 
-export const TopFrame = ({ column1, column2 }: TopFrameTypes) => (
+export const BasicInfo = ({
+  column1,
+  column2,
+}: InferProps<typeof BasicInfoPropTypes>) => (
   <div>
     <Container>
       <Row>
         <Col sm={6}>
-          <Column title={column1.title} content={column1.content} />
+          <BasicInfoColumn title={column1.title} content={column1.content} />
         </Col>
         <Col sm={6}>
-          <Column title={column2.title} content={column2.content} />
+          <BasicInfoColumn title={column2.title} content={column2.content} />
         </Col>
       </Row>
     </Container>
   </div>
 );
-TopFrame.propTypes = TopFramePropTypes;
+BasicInfo.propTypes = BasicInfoPropTypes;
