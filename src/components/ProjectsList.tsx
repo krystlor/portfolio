@@ -8,19 +8,17 @@ interface ProjectInterface extends Array<any> {
   projectImgFilename?: string;
   projectURL?: string;
 }
-type yyy = {
+type ProjectsListFileStructure = {
   projectLinkName: string;
   projectsImgFolderPath: string;
   projectsArray: ProjectInterface[];
 };
 
-const xxx = (projects: yyy) => {
-  const chunkSize = 2;
-
+const transformIntoTwoColumnArray = (projects: ProjectsListFileStructure) => {
   return projects.projectsArray.reduce<ProjectInterface[]>(
     (acc, item) => {
       let group = acc.pop() as ProjectInterface;
-      if (group.length === chunkSize) {
+      if (group.length === 2) {
         acc.push(group);
         group = [];
       }
@@ -33,9 +31,11 @@ const xxx = (projects: yyy) => {
 };
 
 export const ProjectsList = () => {
-  const projects = require(process.env.PROJECTS_LIST_FILEPATH as string) as yyy;
-  const chunkedArray = xxx(projects);
-
+  const projects = require(process.env
+    .PROJECTS_LIST_FILEPATH as string) as ProjectsListFileStructure;
+  console.log(projects);
+  const chunkedArray = transformIntoTwoColumnArray(projects);
+  console.log(chunkedArray);
   let projectActualNumber = 0;
   return (
     <>
