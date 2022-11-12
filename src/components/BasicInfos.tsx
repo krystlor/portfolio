@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BasicInfo } from "./BasicInfo";
 
 export const BasicInfos = () => {
-  const BasicInfos = require(process.env.BASIC_INFOS_FILEPATH as string) as {
+  const BasicInfos = require("../data/basic_infos.json") as {
     title: string;
     content: string[];
   }[];
