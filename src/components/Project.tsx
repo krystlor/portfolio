@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 import { Container, Row, Col } from "react-bootstrap";
-import { ExternalLink } from "./GithubLink";
+import { ExternalLink } from "./ExternalLink";
 import { ProjectImage } from "./ProjectImage";
 
 const ProjectPropTypes = {
