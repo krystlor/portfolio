@@ -31,7 +31,7 @@ const transformIntoTwoColumnArray = (projects: ProjectsListFileStructure) => {
 
 export const ProjectsList = () => {
   const projects =
-    require(`${process.env.PROJECTS_LIST_FILEPATH}`) as ProjectsListFileStructure;
+    require("../data/projects_list.json") as ProjectsListFileStructure;
   console.log(projects);
   const chunkedArray = transformIntoTwoColumnArray(projects);
   console.log(chunkedArray);
