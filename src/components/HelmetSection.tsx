@@ -3,14 +3,12 @@ import PropTypes, { InferProps } from "prop-types";
 import { Helmet } from "react-helmet";
 
 const HelmetSectionPropTypes = {
-  title: PropTypes.string,
   lang: PropTypes.string,
   charset: PropTypes.string,
   robots: PropTypes.string,
 };
 
 export const HelmetSection = ({
-  title,
   lang,
   charset,
   robots,
@@ -19,12 +17,11 @@ export const HelmetSection = ({
     <meta name="robots" content={robots!} />
     <meta charSet={charset!} />
     <meta lang={lang!} />
-    <title>{title}</title>
+    <title>{`${process.env.PAGE_TITLE}`}</title>
   </Helmet>
 );
 
 HelmetSection.defaultProps = {
-  title: "Portfolio",
   lang: "en",
   charset: "utf-8",
   robots: "noindex,nofollow",

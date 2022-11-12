@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Project } from "./Project";
-import PropTypes, { InferProps } from "prop-types";
 
 interface ProjectInterface extends Array<any> {
   projectName?: string;
