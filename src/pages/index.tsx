@@ -9,8 +9,8 @@ import { ProjectsList } from "../components/ProjectsList";
 const IndexPage = () => (
   <>
     <HelmetSection />
-    <ExternalLink href={`${process.env.GITHUB_HREF}`}>
-      {`${process.env.GITHUB_LINKNAME}`}
+    <ExternalLink href={process.env.GITHUB_HREF as string}>
+      {process.env.GITHUB_LINKNAME as string}
     </ExternalLink>
     <h1>{process.env.PAGE_TITLE}</h1>
     <BasicInfos />
