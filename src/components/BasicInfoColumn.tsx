@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes, { InferProps } from "prop-types";
 
 const BasicInfoColumnPropTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.arrayOf(PropTypes.string).isRequired,
+  header: PropTypes.string.isRequired,
+  list: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const formatLine = (line: string) => {
@@ -15,13 +15,13 @@ const formatLine = (line: string) => {
 };
 
 export const BasicInfoColumn = ({
-  title,
-  content,
+  header,
+  list,
 }: InferProps<typeof BasicInfoColumnPropTypes>) => (
   <>
-    <p className="title">{title}</p>
+    <p className="header">{header}</p>
     <ul>
-      {content.map((line) => (
+      {list.map((line) => (
         <li
           key={line}
           dangerouslySetInnerHTML={{

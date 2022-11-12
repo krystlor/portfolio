@@ -5,12 +5,12 @@ import { BasicInfoColumn } from "./BasicInfoColumn";
 
 const BasicInfoPropTypes = {
   column1: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    content: PropTypes.arrayOf(PropTypes.string).isRequired,
+    header: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
   column2: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    content: PropTypes.arrayOf(PropTypes.string).isRequired,
+    header: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
 
@@ -22,10 +22,10 @@ export const BasicInfo = ({
     <Container>
       <Row>
         <Col sm={6}>
-          <BasicInfoColumn title={column1.title} content={column1.content} />
+          <BasicInfoColumn header={column1.header} list={column1.list} />
         </Col>
         <Col sm={6}>
-          <BasicInfoColumn title={column2.title} content={column2.content} />
+          <BasicInfoColumn header={column2.header} list={column2.list} />
         </Col>
       </Row>
     </Container>

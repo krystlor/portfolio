@@ -4,8 +4,8 @@ import { BasicInfo } from "./BasicInfo";
 
 export const BasicInfos = () => {
   const BasicInfos = require("../data/basic_infos.json") as {
-    title: string;
-    content: string[];
+    header: string;
+    list: string[];
   }[];
   return (
     <Container>
