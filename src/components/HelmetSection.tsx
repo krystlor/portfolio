@@ -10,6 +10,7 @@ const HelmetSectionPropTypes = {
 };
 
 export const HelmetSection = ({
+  title,
   lang,
   charset,
   robots,
