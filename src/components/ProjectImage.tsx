@@ -19,7 +19,7 @@ export const ProjectImage = ({
         const loadedProject = document.querySelector(
           `[data-visible=project_${projectActualNumber}]`
         ) as HTMLCanvasElement;
-          loadedProject?.style.visibility = "visible";
+        if (loadedProject != null) loadedProject.style.visibility = "visible";
       }}
       effect="blur"
       alt={projectImgFilename}
